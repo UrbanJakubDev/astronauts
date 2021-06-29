@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Pet Care App</title>
+        <title>Astronauts Crew</title>
       </Head>
 
       <div className="top-bar">
@@ -16,15 +16,9 @@ function MyApp({ Component, pageProps }) {
             <a>Home</a>
           </Link>
           <Link href="/new">
-            <a>Add Pet</a>
+            <a>Add Crew Member</a>
           </Link>
         </div>
-
-        <img
-          id="title"
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Pet_logo_with_flowers.png"
-          alt="pet care logo"
-        ></img>
       </div>
       <div className="grid wrapper">
         <Component {...pageProps} />

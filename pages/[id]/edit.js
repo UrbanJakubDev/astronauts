@@ -7,27 +7,26 @@ const fetcher = (url) =>
     .then((res) => res.json())
     .then((json) => json.data)
 
-const EditPet = () => {
+const EditAstronaut = () => {
   const router = useRouter()
   const { id } = router.query
-  const { data: pet, error } = useSWR(id ? `/api/pets/${id}` : null, fetcher)
+  const { data: astronaut, error } = useSWR(id ? `/api/astronauts/${id}` : null, fetcher)
 
   if (error) return <p>Failed to load</p>
-  if (!pet) return <p>Loading...</p>
+  if (!astronaut) return <p>Loading...</p>
 
-  const petForm = {
-    name: pet.name,
-    owner_name: pet.owner_name,
-    species: pet.species,
-    age: pet.age,
-    poddy_trained: pet.poddy_trained,
-    diet: pet.diet,
-    image_url: pet.image_url,
-    likes: pet.likes,
-    dislikes: pet.dislikes,
+  const astronautForm = {
+    name: astronaut.name,
+    surname: astronaut.surname,
+    superpowers: astronaut.superpowers,
+    birth_date: astronaut.birth_date,
+    rank: astronaut.rank,
+    image_url: astronaut.image_url,
+    strongness: astronaut.strongness,
+    weakness: astronaut.weakness,
   }
 
-  return <Form formId="edit-pet-form" petForm={petForm} forNewPet={false} />
+  return <Form formId="edit-astronaut-form" astronautForm={astronautForm} forNewAstronaut={false} />
 }
 
-export default EditPet
+export default EditAstronaut

@@ -1,42 +1,42 @@
 import Link from 'next/link'
 import dbConnect from '../utils/dbConnect'
-import Pet from '../models/Pet'
+import Astronaut from '../models/Astronaut'
 
-const Index = ({ pets }) => (
+const Index = ({ astronauts }) => (
   <>
-    {/* Create a card for each pet */}
-    {pets.map((pet) => (
-      <div key={pet._id}>
+    {/* Create a card for each astronaut */}
+    {astronauts.map((astronaut) => (
+      <div key={astronaut._id}>
         <div className="card">
-          <img src={pet.image_url} />
-          <h5 className="pet-name">{pet.name}</h5>
-          <div className="main-content">
-            <p className="pet-name">{pet.name}</p>
-            <p className="owner">Owner: {pet.owner_name}</p>
 
-            {/* Extra Pet Info: Likes and Dislikes */}
+          <h5 className="astronaut-name">{astronaut.name}</h5>
+          <div className="main-content">
+            <p className="astronaut-name">{astronaut.surname}</p>
+            <p className="owner">Owner: {astronaut.rank}</p>
+
+            {/* Extra astronaut Info: Likes and Dislikes */}
             <div className="likes info">
-              <p className="label">Likes</p>
+              <p className="label">Strongness</p>
               <ul>
-                {pet.likes.map((data, index) => (
+                {astronaut.strongness.map((data, index) => (
                   <li key={index}>{data} </li>
                 ))}
               </ul>
             </div>
             <div className="dislikes info">
-              <p className="label">Dislikes</p>
+              <p className="label">Weakness</p>
               <ul>
-                {pet.dislikes.map((data, index) => (
+                {astronaut.weakness.map((data, index) => (
                   <li key={index}>{data} </li>
                 ))}
               </ul>
             </div>
 
             <div className="btn-container">
-              <Link href="/[id]/edit" as={`/${pet._id}/edit`}>
+              <Link href="/[id]/edit" as={`/${astronaut._id}/edit`}>
                 <button className="btn edit">Edit</button>
               </Link>
-              <Link href="/[id]" as={`/${pet._id}`}>
+              <Link href="/[id]" as={`/${astronaut._id}`}>
                 <button className="btn view">View</button>
               </Link>
             </div>
@@ -47,19 +47,19 @@ const Index = ({ pets }) => (
   </>
 )
 
-/* Retrieves pet(s) data from mongodb database */
+/* Retrieves astronaut(s) data from mongodb database */
 export async function getServerSideProps() {
   await dbConnect()
 
   /* find all the data in our database */
-  const result = await Pet.find({})
-  const pets = result.map((doc) => {
-    const pet = doc.toObject()
-    pet._id = pet._id.toString()
-    return pet
+  const result = await Astronaut.find({})
+  const astronauts = result.map((doc) => {
+    const astronaut = doc.toObject()
+    astronaut._id = astronaut._id.toString()
+    return astronaut
   })
 
-  return { props: { pets: pets } }
+  return { props: { astronauts: astronauts } }
 }
 
 export default Index

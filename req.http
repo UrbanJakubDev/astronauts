@@ -1,0 +1,31 @@
+### GET ALL
+GET http://localhost:3000/api/pets HTTP/1.1
+
+###
+
+
+### GET single
+GET http://localhost:3000/api/pet/1 HTTP/1.1
+###
+
+
+### POST
+POST http://localhost:3000/api/astronauts HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Marceline",
+    "surname": "Little wampire",
+    "superpowers": "Blood Bitte",
+    "rank": "Space Ranger",
+    "birth_date": 666,
+    "image_url": "",
+    "strongness": ["running", "swimming"],
+    "weakness": ["running", "swimming"]
+}
+
+###
+
+### Delete single
+DELETe http://localhost:8000/api/location/4 HTTP/1.1
+###
