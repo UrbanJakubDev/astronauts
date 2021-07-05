@@ -1,0 +1,465 @@
+/*
+* Skeleton V1.0.0
+* Copyright 2021, Jakub Urban
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  transition: all 0.15s ease;
+}
+
+::-moz-selection {
+  background-color: var(--color-text-secondary);
+  color: #fff;
+}
+
+::selection {
+  background-color: var(--color-text-secondary);
+  color: #fff;
+}
+
+section {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text-primary);
+  background-image: linear-gradient(170deg, var(--color-body-bg-main), var(--color-body-bg-secondary))
+}
+
+
+/* Typography
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 1.25;
+  letter-spacing: -0.1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+
+h5 {
+  font-size: 0.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+
+h6 {
+  font-size: 0.6rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  }
+  h3 {
+    font-size: 3.6rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  h5 {
+    font-size: 2.4rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
+
+/* Links
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  margin: 0rem 1.5rem 0rem 0rem;
+
+  &:hover{
+    color: var(--color-link-hover);
+  }
+}
+
+/* Buttons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn {
+  background-color: var(--color-btn);
+  padding: 8px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+/* Lists
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ul {
+  list-style: none;
+  padding-left: .8rem;
+}
+
+
+
+/* Code
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #f1f1f1;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
+/* Blockqoute
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+blockquote {
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid black;
+}
+
+/* Icon style
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.material-icons {
+  line-height: inherit;
+
+  &.left {
+    float: left;
+    margin-right: 15px;
+  }
+
+  &.right {
+    float: right;
+    margin-left: 15px;
+  }
+
+  &.tiny {
+    font-size: 1rem;
+  }
+
+  &.small {
+    font-size: 2.6rem;
+  }
+
+  &.medium {
+    font-size: 3.3rem;
+  }
+
+  &.large {
+    font-size: 6rem;
+  }
+}
+
+/* Misc
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #e1e1e1;
+}
+
+// Images
+img {
+  max-width: 50rem;
+  width: 100%;
+  height: auto;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  img {
+    width: 80%;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  img {
+    width: 50%;
+  }
+}
+
+figure {
+  margin: 0;
+  width: 100%;
+}
+
+// Images
+img.responsive-img,
+video.responsive-video {
+  max-width: 3100%;
+  height: auto;
+}
+
+// Parallax
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+
+  .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    img {
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate3d(0, 0, 0);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/*******************
+    Utility Classes
+  *******************/
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+// Text Align
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center,
+.center-align {
+  text-align: center;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+// No Text Select
+.no-select {
+  user-select: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.box-shadow {
+  box-shadow: 3px 3px 10px var(--color-card-shadow);
+}
+
+.box-shadow-hover {
+  box-shadow: 3px 3px 10px var(--color-card-shadow);
+
+  &:hover {
+    box-shadow: 8px 8px 10px var(--color-card-shadow-hover);
+  }
+}
+
+.neumorphism {
+  border-radius: 10px;
+  background: linear-gradient(
+    145deg,
+    var(--color-neumorphism-light),
+    var(--color-neumorphism-dark)
+  );
+  box-shadow: 20px 20px 60px var(--color-neumorphism-light),
+    -20px -20px 60px var(--color-neumorphism-dark);
+}
+
+/* Clearing
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+// TODO: smazat
+.post-preview-container {
+  a {
+    background-color: lighten(#282c3a, 3%);
+    box-shadow: 3px 3px 10px darken(#282c3a, 5%);
+    border-radius: 0.3rem;
+  }
+}
+
+/* Media Queries
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+  Note: The best way to structure the use of media queries is to create the queries
+  near the relevant code. For example, if you wanted to change the styles for buttons
+  on small devices, paste the mobile query code up in the buttons section and style it
+  there.
+  */
+
+/* Larger than small mobile */
+@media (min-width: 320px) {
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .page_header,
+  .page_body {
+    max-width: 800px;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1400px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1900px) {
+}

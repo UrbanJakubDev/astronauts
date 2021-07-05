@@ -1,0 +1,95 @@
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+// TODO: Do some color schemas
+
+//Light schemes
+$light-primary-color: rgba(42, 42, 43, 1);
+$light-secondary-color: hotpink;
+$light-body-bg-color: #f5f4f3;
+$light-card-bg-color: rgba(247, 247, 246, 1);
+$light-shade-value: 20%;
+$light-btn-color: rgb(211, 209, 209);
+$light-btn-hover-color: hotpink;
+
+//Dark schemes
+
+$dark-color-text: rgb(170, 170, 170);
+$dark-color-theme-1: rgba(41, 0, 82, 1);
+$dark-color-theme-2: rgba(154, 54, 255, 1);
+$dark-color-theme-3: rgba(113, 22, 204, 1);
+$dark-color-theme-4: rgba(125, 128, 0, 1);
+$dark-color-theme-5: rgba(201, 204, 22, 1);
+$dark-shade-value: 15%;
+$dark-btn-color: rgba(255, 255, 255, 0.377);
+$dark-btn-hover-color: rgba(201, 204, 22, 1);
+
+/* Color Theme Swatches in RGBA */
+$My-Color-Theme-1-rgba: rgba(41, 0, 82, 1);
+$My-Color-Theme-2-rgba: rgba(154, 54, 255, 1);
+$My-Color-Theme-3-rgba: rgba(113, 22, 204, 1);
+$My-Color-Theme-4-rgba: rgba(125, 128, 0, 1);
+$My-Color-Theme-5-rgba: rgba(201, 204, 22, 1);
+
+// Main setup
+
+:root {
+  // Body background
+  --color-body-bg-main: #{$dark-color-theme-1};
+  --color-body-bg-secondary: #{shade($dark-color-theme-1, 50%)};
+
+  // Text
+  --color-text-primary: #{$dark-color-text};
+  --color-text-secondary: #{$dark-color-theme-5};
+  --color-text-tercial: #{$dark-color-theme-5};
+  --color-text-shadow: #{shade($dark-color-theme-4, $dark-shade-value)};
+
+  //Cards
+  //--color-card-bg: #{$dark-card-bg-color};
+  --color-card-bg: #{darken($dark-color-theme-1, 4%)};
+  --color-card-border: #{shade($dark-color-theme-1, 10%)};
+  --color-card-shadow: #{shade($dark-color-theme-1, 50%)};
+
+  // Links
+  --color-link: #{$dark-color-theme-2};
+  --color-link-hover: #{shade($dark-color-theme-5, 5%)};
+
+  //Icons
+  --color-tag-icon: #{light($dark-color-theme-1, 40%)};
+
+  // Buttons
+  --color-btn: #{$dark-btn-color};
+  --color-btn-grad: #{shade($dark-btn-color, 20%)};
+  --color-btn-hover: #{$dark-btn-hover-color};
+}
+
+.light {
+  // Body background
+  --color-body-bg: #{$light-body-bg-color};
+
+  // Text
+  --color-text-primary: #{$light-primary-color};
+  --color-text-secondary: #{$light-secondary-color};
+  --color-text-shadow: #{shade($light-body-bg-color, $light-shade-value)};
+
+  // Logo
+  --color-logo-shadow: #{shade($light-body-bg-color, 10%)};
+
+  //Cards
+  --color-card-bg: #{$light-body-bg-color};
+  --color-card-border: #{shade($light-body-bg-color, 10%)};
+  --color-card-shadow: #{shade($light-body-bg-color, 15%)};
+  --color-card-shadow-hover: #{shade($light-body-bg-color, 30%)};
+
+  // Links
+  --color-link: #{$light-primary-color};
+  --color-link-hover: #{shade($light-body-bg-color, 5%)};
+
+  //Icons
+  --color-tag-icon: #{lighten($light-primary-color, 40%)};
+
+  // Buttons
+  --color-btn: #{$light-btn-color};
+  --color-btn-hover: #{$light-btn-hover-color};
+}

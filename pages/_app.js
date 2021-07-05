@@ -1,7 +1,8 @@
-import '../css/style.css'
-import '../css/form.css'
-import Head from 'next/head'
-import Link from 'next/link'
+import "../css/style.scss";
+import "../css/form.scss";
+import Head from "next/head";
+import Link from "next/link";
+import TopNav from "../components/TopNav/TopNav";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,21 +11,15 @@ function MyApp({ Component, pageProps }) {
         <title>Astronauts Crew</title>
       </Head>
 
-      <div className="top-bar">
-        <div className="nav">
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/new">
-            <a>Add Crew Member</a>
-          </Link>
-        </div>
-      </div>
+      {/* Navigaion component */}
+      <TopNav />
+
+      {/* Rendering main content */}
       <div className="grid wrapper">
         <Component {...pageProps} />
       </div>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
