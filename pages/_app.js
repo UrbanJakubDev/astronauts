@@ -1,8 +1,8 @@
-import "../css/style.scss";
-import "../css/form.scss";
-import Head from "next/head";
-import Link from "next/link";
-import TopNav from "../components/TopNav/TopNav";
+import '../css/style.scss'
+import '../css/form.scss'
+import Head from 'next/head'
+import Link from 'next/link'
+import TopNav from '../components/TopNav/TopNav'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

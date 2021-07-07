@@ -10,7 +10,10 @@ const fetcher = (url) =>
 const EditAstronaut = () => {
   const router = useRouter()
   const { id } = router.query
-  const { data: astronaut, error } = useSWR(id ? `/api/astronauts/${id}` : null, fetcher)
+  const { data: astronaut, error } = useSWR(
+    id ? `/api/astronauts/${id}` : null,
+    fetcher
+  )
 
   if (error) return <p>Failed to load</p>
   if (!astronaut) return <p>Loading...</p>
@@ -22,11 +25,15 @@ const EditAstronaut = () => {
     birth_date: astronaut.birth_date,
     rank: astronaut.rank,
     image_url: astronaut.image_url,
-    strongness: astronaut.strongness,
-    weakness: astronaut.weakness,
   }
 
-  return <Form formId="edit-astronaut-form" astronautForm={astronautForm} forNewAstronaut={false} />
+  return (
+    <Form
+      formId="edit-astronaut-form"
+      astronautForm={astronautForm}
+      forNewAstronaut={false}
+    />
+  )
 }
 
 export default EditAstronaut

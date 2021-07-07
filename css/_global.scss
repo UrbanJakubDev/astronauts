@@ -64,11 +64,14 @@ body {
   line-height: 1.6;
   font-weight: 400;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--color-text-primary);
-  background-image: linear-gradient(170deg, var(--color-body-bg-main), var(--color-body-bg-secondary))
+  background-image: linear-gradient(
+    170deg,
+    var(--color-body-bg-main),
+    var(--color-body-bg-secondary)
+  );
 }
-
 
 /* Typography
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -159,7 +162,7 @@ a {
   text-decoration: none;
   margin: 0rem 1.5rem 0rem 0rem;
 
-  &:hover{
+  &:hover {
     color: var(--color-link-hover);
   }
 }
@@ -182,11 +185,7 @@ a {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 ul {
-  list-style: none;
-  padding-left: .8rem;
 }
-
-
 
 /* Code
     –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -406,19 +405,11 @@ video.responsive-video {
 .container:after,
 .row:after,
 .u-cf {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
 
-// TODO: smazat
-.post-preview-container {
-  a {
-    background-color: lighten(#282c3a, 3%);
-    box-shadow: 3px 3px 10px darken(#282c3a, 5%);
-    border-radius: 0.3rem;
-  }
-}
 
 /* Media Queries
   –––––––––––––––––––––––––––––––––––––––––––––––––– */

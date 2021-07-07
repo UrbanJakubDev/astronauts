@@ -13,8 +13,8 @@ const AstronautSchema = new mongoose.Schema({
     /* he surname of the Astronaut */
 
     type: String,
-    required: [true, "Please provide a surbane for Astronaut"],
-    maxlength: [20, "Surname cannot be more than 60 characters"],
+    required: [true, 'Please provide a surbane for Astronaut'],
+    maxlength: [20, 'Surname cannot be more than 60 characters'],
   },
   superpowers: {
     /* The Astronaut's superpowers */
@@ -26,9 +26,9 @@ const AstronautSchema = new mongoose.Schema({
   birth_date: {
     /* Astronauts age, if applicable */
 
-    type: Number,
+    type: Date,
   },
-  rank:{
+  rank: {
     /* Astronauts Rank, if applicable */
     type: String,
   },
@@ -38,16 +38,7 @@ const AstronautSchema = new mongoose.Schema({
     required: [false, 'Please provide an image url for this Astronaut.'],
     type: String,
   },
-  strongness: {
-    /* List of things your Astronut is strong */
-
-    type: Array,
-  },
-  weakness: {
-    /* List of things your Astronaut is weak */
-
-    type: Array,
-  },
 })
 
-export default mongoose.models.Astronaut || mongoose.model('Astronaut', AstronautSchema)
+export default mongoose.models.Astronaut ||
+  mongoose.model('Astronaut', AstronautSchema)

@@ -5,11 +5,9 @@ const NewAstronaut = () => {
     name: '',
     surname: '',
     superpowers: '',
-    birth_date: 0,
+    birth_date: '',
     rank: '',
     image_url: '',
-    strongness: [],
-    weakness: [],
   }
 
   return <Form formId="add-astronaut-form" astronautForm={astronautForm} />

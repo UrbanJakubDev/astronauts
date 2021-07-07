@@ -2,8 +2,6 @@
   @return mix(black, $color, $percentage);
 }
 
-// TODO: Do some color schemas
-
 //Light schemes
 $light-primary-color: rgba(42, 42, 43, 1);
 $light-secondary-color: hotpink;
@@ -16,24 +14,16 @@ $light-btn-hover-color: hotpink;
 //Dark schemes
 
 $dark-color-text: rgb(170, 170, 170);
-$dark-color-theme-1: rgba(41, 0, 82, 1);
-$dark-color-theme-2: rgba(154, 54, 255, 1);
-$dark-color-theme-3: rgba(113, 22, 204, 1);
-$dark-color-theme-4: rgba(125, 128, 0, 1);
-$dark-color-theme-5: rgba(201, 204, 22, 1);
+$dark-color-theme-1: rgb(23, 8, 77);
+$dark-color-theme-2: rgba(97, 54, 255, 1);
+$dark-color-theme-3: rgba(70, 26, 230, 1);
+$dark-color-theme-4: rgba(153, 137, 0, 1);
+$dark-color-theme-5: rgba(230, 209, 25, 1);
 $dark-shade-value: 15%;
 $dark-btn-color: rgba(255, 255, 255, 0.377);
 $dark-btn-hover-color: rgba(201, 204, 22, 1);
 
-/* Color Theme Swatches in RGBA */
-$My-Color-Theme-1-rgba: rgba(41, 0, 82, 1);
-$My-Color-Theme-2-rgba: rgba(154, 54, 255, 1);
-$My-Color-Theme-3-rgba: rgba(113, 22, 204, 1);
-$My-Color-Theme-4-rgba: rgba(125, 128, 0, 1);
-$My-Color-Theme-5-rgba: rgba(201, 204, 22, 1);
-
 // Main setup
-
 :root {
   // Body background
   --color-body-bg-main: #{$dark-color-theme-1};
@@ -43,7 +33,7 @@ $My-Color-Theme-5-rgba: rgba(201, 204, 22, 1);
   --color-text-primary: #{$dark-color-text};
   --color-text-secondary: #{$dark-color-theme-5};
   --color-text-tercial: #{$dark-color-theme-5};
-  --color-text-shadow: #{shade($dark-color-theme-4, $dark-shade-value)};
+  --color-text-shadow: #{shade($dark-color-theme-5, 90%)};
 
   //Cards
   //--color-card-bg: #{$dark-card-bg-color};

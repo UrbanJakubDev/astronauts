@@ -1,6 +1,6 @@
-import BtnContainer from "../BtnContainer/BtnContainer";
+import BtnContainer from '../BtnContainer/BtnContainer'
 
-const CrewMemberCard = ({ astronaut }) => {
+const CrewMemberCard = ({ astronaut, preview }) => {
   return (
     <div className="card">
       <h1 className="astronautName">{astronaut.name}</h1>
@@ -10,31 +10,10 @@ const CrewMemberCard = ({ astronaut }) => {
         <p className="rank">Rank: {astronaut.rank}</p>
         <p className="superpowers">Superpowers: {astronaut.superpowers}</p>
 
-        {/* Extra astronaut Info: Likes and Dislikes */}
-        Strongness and Weakness
-        <div className="properties">
-          <div className="info strongness">
-            <p className="label">Strongness</p>
-            <ul>
-              {astronaut.strongness.map((data, index) => (
-                <li key={index}>{data} </li>
-              ))}
-            </ul>
-          </div>
-          <div className="info weakness">
-            <p className="label">Weakness</p>
-            <ul>
-              {astronaut.weakness.map((data, index) => (
-                <li key={index}>{data} </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-              <BtnContainer routeParam={astronaut} />
+        <BtnContainer routeParam={astronaut} preview={preview} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CrewMemberCard;
+export default CrewMemberCard

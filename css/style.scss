@@ -1,71 +1,66 @@
-
 @import './normalize';
 @import './colors';
 @import './global';
 
 // TopNav
 
-.main-heading{
-    color: var(--color-text-tercial) !important;
-    font-size: 4rem;
-    font-weight: 800;
+.main-heading {
+  margin: 1rem auto;
+  color: var(--color-text-tercial) !important;
+  text-shadow: 2px 2px 2px var(--color-text-shadow);
+  font-size: 4rem;
+  font-weight: 800;
 }
 
-.top-bar{
-    font-size: 1.8rem;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
+.top-bar {
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
 }
 
+.nav{
+  text-align: center;
+}
 
 // Btn-Container
 
-.btn-container{
-    margin: 2rem 0 0 0;
-    text-align: right;
+.btn-container {
+  margin: 2rem 0 0 0;
+  text-align: right;
 }
 
-.btn{
-    border: none;
-    margin-left: .4rem;
+.btn {
+  border: none;
+  margin-left: 0.4rem;
 }
 
 //Card
-.card{
-    background: var(--color-card-bg);
-    width: 90%;
-    margin: 2rem auto;
-    padding: 3rem 2rem 3rem 2rem;
-    max-width: 50rem;
-    border-radius: 5px;
-    box-shadow: 5px 5px 20px var(--color-card-shadow);
+.card {
+  background: var(--color-card-bg);
+  width: 90%;
+  margin: 2rem auto;
+  padding: 3rem 2rem 3rem 2rem;
+  max-width: 50rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px var(--color-card-shadow);
 }
 
-.mainContent{
-    width: 100%;
+.main-content {
+  text-align: justify;
+  margin: 3rem auto;
+  width: 50%;
 }
 
-.properties{
-    margin: 1.5rem auto;
-    padding: 0 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.astronautName {
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 0.5rem 0;
 }
 
-.info{
-    width: auto;
+.astronautSurname {
+  font-size: 1em;
 }
 
-.astronautName{
-    font-weight: 800;
-    font-size: 2.4rem;
-    color: var(--color-text-secondary);
-    margin: 0 0 .5rem 0;
-}
-
-
-.astronautSurname{
-    font-size: 1em;
-}
+// User Page
