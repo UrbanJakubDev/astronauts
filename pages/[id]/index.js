@@ -17,7 +17,7 @@ const AstronautPage = ({ astronaut }) => {
       await fetch(`/api/astronauts/${astronautID}`, {
         method: 'Delete',
       })
-      router.push('/')
+      router.push('/astronauts')
     } catch (error) {
       setMessage('Failed to delete the astronaut.')
     }

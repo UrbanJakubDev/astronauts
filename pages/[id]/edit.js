@@ -18,6 +18,8 @@ const EditAstronaut = () => {
   if (error) return <p>Failed to load</p>
   if (!astronaut) return <p>Loading...</p>
 
+  console.log(astronaut.birth_date);
+
   const astronautForm = {
     name: astronaut.name,
     surname: astronaut.surname,

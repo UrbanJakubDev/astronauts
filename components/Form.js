@@ -12,7 +12,7 @@ const Form = ({ formId, astronautForm, forNewAstronaut = true }) => {
     name: astronautForm.name,
     surname: astronautForm.surname,
     superpowers: astronautForm.superpowers,
-    birth_date: astronautForm.birth_date,
+    birth_date: astronautForm.birth_date.substr(0, 10),
     rank: astronautForm.rank,
     image_url: astronautForm.image_url,
   })
@@ -94,7 +94,7 @@ const Form = ({ formId, astronautForm, forNewAstronaut = true }) => {
     let err = {}
     if (!form.name) err.name = 'Name is required'
     if (!form.surname) err.surname = 'Surname is required'
-    if (!form.superpowers) err.superpowers = 'Species is required'
+    if (!form.superpowers) err.superpowers = 'Superpower is required'
     if (!form.image_url) err.image_url = 'Image URL is required'
     return err
   }
@@ -122,7 +122,7 @@ const Form = ({ formId, astronautForm, forNewAstronaut = true }) => {
           required
         />
 
-        <label htmlFor="superpowers">Superpowers</label>
+        <label htmlFor="superpowers">Superpower</label>
         <input
           type="text"
           maxLength="30"
@@ -132,7 +132,7 @@ const Form = ({ formId, astronautForm, forNewAstronaut = true }) => {
           required
         />
 
-        <label htmlFor="rank">rank</label>
+        <label htmlFor="rank">Rank</label>
         <input
           type="text"
           maxLength="30"

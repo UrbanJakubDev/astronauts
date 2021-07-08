@@ -2,15 +2,6 @@
   @return mix(black, $color, $percentage);
 }
 
-//Light schemes
-$light-primary-color: rgba(42, 42, 43, 1);
-$light-secondary-color: hotpink;
-$light-body-bg-color: #f5f4f3;
-$light-card-bg-color: rgba(247, 247, 246, 1);
-$light-shade-value: 20%;
-$light-btn-color: rgb(211, 209, 209);
-$light-btn-hover-color: hotpink;
-
 //Dark schemes
 
 $dark-color-text: rgb(170, 170, 170);
@@ -36,7 +27,6 @@ $dark-btn-hover-color: rgba(201, 204, 22, 1);
   --color-text-shadow: #{shade($dark-color-theme-5, 90%)};
 
   //Cards
-  //--color-card-bg: #{$dark-card-bg-color};
   --color-card-bg: #{darken($dark-color-theme-1, 4%)};
   --color-card-border: #{shade($dark-color-theme-1, 10%)};
   --color-card-shadow: #{shade($dark-color-theme-1, 50%)};
@@ -52,34 +42,4 @@ $dark-btn-hover-color: rgba(201, 204, 22, 1);
   --color-btn: #{$dark-btn-color};
   --color-btn-grad: #{shade($dark-btn-color, 20%)};
   --color-btn-hover: #{$dark-btn-hover-color};
-}
-
-.light {
-  // Body background
-  --color-body-bg: #{$light-body-bg-color};
-
-  // Text
-  --color-text-primary: #{$light-primary-color};
-  --color-text-secondary: #{$light-secondary-color};
-  --color-text-shadow: #{shade($light-body-bg-color, $light-shade-value)};
-
-  // Logo
-  --color-logo-shadow: #{shade($light-body-bg-color, 10%)};
-
-  //Cards
-  --color-card-bg: #{$light-body-bg-color};
-  --color-card-border: #{shade($light-body-bg-color, 10%)};
-  --color-card-shadow: #{shade($light-body-bg-color, 15%)};
-  --color-card-shadow-hover: #{shade($light-body-bg-color, 30%)};
-
-  // Links
-  --color-link: #{$light-primary-color};
-  --color-link-hover: #{shade($light-body-bg-color, 5%)};
-
-  //Icons
-  --color-tag-icon: #{lighten($light-primary-color, 40%)};
-
-  // Buttons
-  --color-btn: #{$light-btn-color};
-  --color-btn-hover: #{$light-btn-hover-color};
 }

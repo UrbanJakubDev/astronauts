@@ -7,9 +7,6 @@ Move to directory where you have your apps:
 
 ```bash
 git clone https://github.com/UrbanJakubDev/astronauts.git
-
-# and then
-npm install
 ```
 
 ## Configuration
