@@ -1,10 +1,19 @@
 
-const ThemeMode = () => {
+// React component for ThemeMod
+ const ThemeMod = () => {
+
+    const toogleThemeMod = () => {
+        if (theme === 'light') {
+            setTheme = 'dark';
+        } else {
+            setTheme = 'light';
+    }
+
     return (
-        <div>
-            
+        <div className="theme-mod" onClick={toogleThemeMod}>
+            X
         </div>
     )
-}
+ }
 
-export default ThemeMode
+ export default ThemeMod;
