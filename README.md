@@ -1,5 +1,8 @@
 # Astronauts app with MongoDB, Mongoose and Next.js
 
+Dummy project for Job Recuriter
+Just moddified Next.js example
+
 
 ## How to use
 
